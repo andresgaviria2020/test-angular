@@ -1,0 +1,56 @@
+<br/>
+<br/>
+<br/>
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<form action="#" #loginForm="ngForm"  (ngSubmit)="guardarUsuario()" autocomplete="off">
+            <h1>Información básica</h1>
+			<br>
+			<input type="text" class="form-control" #nombres="ngModel" name="nombres" [(ngModel)]="form.nombres" placeholder="Nombre completo" required autofocus>
+			<input type="email" class="form-control" #email="ngModel" name="email" [(ngModel)]="form.correo" placeholder="Correo electrónico" required> 
+			<label>Doy mi consentimiento de lo mencionado <a (click)="abrirModal()" style="color: blue;">aquí</a>
+				<input type="checkbox" [checked]="form.status" #saveUserNameCheckBox
+				id="saveUserNameCheckBox"  (change)="onSaveUsernameChanged(saveUserNameCheckBox.checked)">   
+			</label> 
+            <br> 
+            <Button mdbBtn rounded="true" mdbWavesEffect color="danger" type="submit">
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" *ngIf="show"></span>
+                Iniciar
+            </Button>     
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-right">
+				<h1>¡Bienvenido!</h1>
+				<p>Gracias por participar de nuestro experimento</p>
+				<p>Recuerda que debes ingresar la información para iniciar la encuesta</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5  id="exampleModalLabel" >Consentimiento</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<form #createNewsForm="ngForm"  autocomplete="off">
+			<label for="message-first" class="col-form-label" style="text-align: justify;">Autorizo a los estudiantes del curso 2020-2 de Procesos Psicológicos básicos y complejos de II
+				 semestre de la facultad de Psicología de la Universidad Cooperativa de Colombia - sede Cali, para la aplicación del siguiente test, he sido informado (a)
+				  sobre el propósito de la misma y he comprendido los fines del experimento. De igual manera entiendo que los resultados expuestos son meramente académicos.</label>
+	  </form>
+	  </div>
+	</div>
+  </div>
+
+<footer>
+	<p>
+		<a target="_blank" href="https://www.ucc.edu.co/Paginas/inicio.aspx">Universidad Cooperativa de Colombia</a> - Psicología
+	</p>
+</footer>
