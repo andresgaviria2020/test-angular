@@ -150,7 +150,7 @@ export class QuizComponent implements OnInit {
     var fecha2 = moment(new Date());
     var fecha1 = moment(this.date.getTime());
 
-    if(this.a==9){
+    if(this.a==this.quiz.questions.length){
       this.fileToUpload = this.exportService.exportExcel(answersReport,"prueba");
       const formData = new FormData();
       formData.append('nombre', localStorage.getItem("nombre"));
