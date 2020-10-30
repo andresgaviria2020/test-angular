@@ -1,7 +1,9 @@
 # ng2-quiz
 
-A general purpose quiz application developed in angular (version 8) that can be used for multiple purpose.
-+
-+For detailed documentation, please go to: https://www.codeproject.com/Articles/1167451/Quiz-Application-in-Angular
+Se realiza un test en angular basado en la aplicación -> https://www.codeproject.com/Articles/1167451/Quiz-Application-in-Angular
 
-### Please raise a pull request for any bug fix or if you have implemented a new feature and feel it is useful.
+Se realiza una pantalla para obtener la información de la persona que va a realizar el test, luego se obtiene información de la persona que va a realizar el test
+
+Se genera una validación para que todas las preguntas estén respondidas.
+
+Se genera un excel con las respuestas y se envía por medio de https://getform.io/ para recibir la información sin necesidad de generar un backend
